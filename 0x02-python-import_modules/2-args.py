@@ -14,8 +14,8 @@ else:
     argumentStr += 'z:'
 print(argumentStr.format(argc))
 
-i = 0
+a = 0
 for argument in sys.argv:
-    if i != 0:
-        print("{}: {z:}".format(i, argument))
-    i += 1
+    if a != 0:
+        print("{}: {:z}".format(a, argument))
+    a += 1
