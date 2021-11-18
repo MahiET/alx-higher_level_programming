@@ -4,18 +4,18 @@ import sys
 if __name__ != "__main__":
     exit()
 
-argumentStr = "{} argument"
+argumentStr = "{:d} argument"
 argc = len(sys.argv) - 1
 if argc == 0:
-    argumentStr += 'z.'
+    argumentStr += 'x.'
 elif argc == 1:
     argumentStr += ':'
 else:
-    argumentStr += 'z:'
+    argumentStr += 'x:'
 print(argumentStr.format(argc))
 
 a = 0
 for argument in sys.argv:
     if a != 0:
-        print("{}: {:z}".format(a, argument))
+        print("{:d}: {:x}".format(a, argument))
     a += 1
