@@ -7,15 +7,15 @@ if __name__ != "__main__":
 argumentStr = "{:d} argument"
 argc = len(sys.argv) - 1
 if argc == 0:
-    argumentStr += 'x.'
+    argumentStr += 's.'
 elif argc == 1:
     argumentStr += ':'
 else:
-    argumentStr += 'x:'
+    argumentStr += 's:'
 print(argumentStr.format(argc))
 
-a = 0
+i = 0
 for argument in sys.argv:
-    if a != 0:
-        print("{:d}: {:x}".format(a, argument))
-    a += 1
+    if i != 0:
+        print("{:d}: {:s}".format(i, argument))
+    i += 1
