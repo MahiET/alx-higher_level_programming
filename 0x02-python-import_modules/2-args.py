@@ -17,5 +17,5 @@ print(argumentStr.format(argc))
 i = 0
 for argument in sys.argv:
     if i != 0:
-        print("{}: {}".format(i, argument))
+        print("{}: {z:}".format(i, argument))
     i += 1
