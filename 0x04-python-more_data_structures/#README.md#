@@ -1,0 +1,67 @@
+0x04. Python - More Data Structures: Set, Dictionary
+
+Using Lists as Stacks¶
+
+The list methods make it very easy to use a list as a stack, where the last element added is the first element retrieved (“last-in, first-out”). To add an item to the top of the stack, use append(). To retrieve an item from the top of the stack, use pop() without an explicit index.
+
+For example:
+
+stack = [3, 4, 5]
+
+stack.append(6)
+
+stack.append(7)
+
+stack
+
+[3, 4, 5, 6, 7]
+
+stack.pop()
+
+7
+
+Using Lists as Queues¶
+
+It is also possible to use a list as a queue, where the first element added is the first element retrieved (“first-in, first-out”); however, lists are not efficient for this purpose. While appends and pops from the end of list are fast, doing inserts or pops from the beginning of a list is slow (because all of the other elements have to be shifted by one).
+
+from collections import deque
+
+queue = deque(["Eric", "John", "Michael"])
+
+queue.append("Terry")           # Terry arrives
+
+queue.append("Graham")          # Graham arrives
+
+queue.popleft()                 # The first to arrive now leaves
+
+'Eric'
+
+queue.popleft()                 # The second to arrive now leaves
+
+'John'
+
+queue                           # Remaining queue in order of arrival
+
+deque(['Michael', 'Terry', 'Graham'])
+
+List Comprehensions¶
+
+List comprehensions provide a concise way to create lists. Common applications are to make new lists where each element is the result of some operations applied to each member of another sequence or iterable, or to create a subsequence of those elements that satisfy a certain condition.
+
+For example, assume we want to create a list of squares, like:
+
+squares = []
+
+for x in range(10):
+
+...     squares.append(x**2)
+
+...
+
+squares
+
+[0, 1, 4, 9, 16, 25, 36, 49, 64, 81]
+
+Lambda Operator, filter, reduce and map
+
+If Guido van Rossum, the author of the programming language Python, had got his will, this chapter would have been missing in our tutorial. In his article from May 2005 "All Things Pythonic: The fate of reduce() in Python 3000", he gives his reasons for dropping lambda, map(), filter() and reduce(). He expected resistance from the Lisp and the scheme "folks". What he didn't anticipate was the rigidity of this opposition. Enough that Guido van Rossum wrote hardly a year later: "After so many attempts to come up with an alternative for lambda, perhaps we should admit defeat. I've not had the time to follow the most recent rounds, but I propose that we keep lambda, so as to stop wasting everybody's talent and time on an impossible quest." We can see the result: lambda, map() and filter() are still part of core Python. Only reduce() had to go; it moved into the module functools.
