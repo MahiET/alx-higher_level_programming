@@ -14,6 +14,10 @@ def __init__(self, size=0):
      """
         Args:
             size: size of the square
+
+            TypeError: Exception if size is not an integer
+            ValueError: Excep
+     
         """
         if type(size) is not int:
             raise TypeError("size must be an integer")
