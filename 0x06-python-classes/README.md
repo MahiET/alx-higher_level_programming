@@ -13,11 +13,11 @@ class A:
 
     a = "I am a class attribute!"
     
-x = A()
+      x = A()
 
-y = A()
+       y = A()
 
-x.a
+         x.a
 
 OUTPUT:
 
@@ -31,16 +31,24 @@ example
 
 class P:
     def __init__(self, x):
+    
         self.__x = x
+	
     def get_x(self):
+    
         return self.__x
+	
     def set_x(self, x):
         self.__x = x
+	
 
 from mutators import P
+
 p1 = P(42)
-p2 = P(4711)
-p1.get_x()
+
+  p2 = P(4711)
+ 
+   p1.get_x()
 
 
 OUTPUT:
@@ -48,8 +56,10 @@ OUTPUT:
 42
 
 p1.set_x(47)
-p1.set_x(p1.get_x()+p2.get_x())
-p1.get_x()
+
+ p1.set_x(p1.get_x()+p2.get_x())
+
+   p1.get_x()
 
 OUTPUT:
 
@@ -58,6 +68,8 @@ OUTPUT:
 Let's rewrite the class P in a Pythonic way. No getter, no setter and instead of the private attribute self.__x we use a public one:
 
 class P:
+
     def __init__(self,x):
+    
         self.x = x
 	
