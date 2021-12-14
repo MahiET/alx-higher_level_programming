@@ -1,17 +1,18 @@
 
-                       0x07. Python - Test-driven development
+                      # 0x07. Python - Test-driven development
 
-doctest — Testing Through Documentation
+# doctest — Testing Through Documentation
 
 doctest tests source code by running examples embedded in the documentation and verifying that they produce the expected results. It works by parsing the help text to find examples, running them, then comparing the output text against the expected value. Many developers find doctest easier to use than unittest because, in its simplest form, there is no API to learn before using it. However, as the examples become more complex the lack of fixture management can make writing doctest tests more cumbersome than using unittest.
 
-Getting Started
+# Getting Started
 
 The first step to setting up doctests is to use the interactive interpreter to create examples and then copy and paste them into the docstrings in the module. Here, my_function() has two examples given:
 
 # doctest_simple.py
 
 def my_function(a, b):
+
     """
 
     >>> my_function(2, 3)
@@ -34,7 +35,7 @@ The doctest module searches for pieces of text that look like interactive Python
 
 . To write tutorial documentation for a package, liberally illustrated with input-output examples. Depending on whether the examples or the expository text are emphasized, this has the flavor of “literate testing” or “executable documentation”.
 
-    Option Flags
+   # Option Flags
 
 doctest.DONT_ACCEPT_TRUE_FOR_1
 
