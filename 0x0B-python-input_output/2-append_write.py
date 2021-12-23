@@ -5,7 +5,7 @@ a string at the end of a text file and
 returns number of characters added
 """
 
-
 def append_write(filename="", text=""):
-    with open(filename, mode="a", encoding="utf-8") as myFile:
-        return (myFile.write(str(text)))
+    with open(filename, 'a', encoding="utf-8") as f:
+        total = f.write(text)
+    return total
