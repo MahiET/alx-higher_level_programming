@@ -7,7 +7,12 @@ object to text file json rep
 
 def save_to_json_file(my_obj, filename):
     """
-     function that writes to text file
+     Writes the representation of my_obj
+      to filename.
+    Args:
+        - my_obj: object to write
+        - filename: file to write into
     """
-    with open(filename, mode="w") as myFile:
-        json.dump(my_obj, myFile)
+
+    with open(filename, 'w+') as f:
+        json.dump(my_obj, f)
