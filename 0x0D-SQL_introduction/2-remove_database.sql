@@ -1,3 +1,3 @@
--- deleting the database
--- should not fail if doesn't exist database
-DROP DATABASE IF NOT EXISTS hbtn_0c_0
+-- deleting a database
+-- should not fail if database doesn't exist
+DROP DATABASE IF EXISTS hbtn_0c_0
