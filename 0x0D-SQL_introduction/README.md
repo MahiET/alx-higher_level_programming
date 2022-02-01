@@ -8,21 +8,23 @@ Data definition language(DDL)
 
 DDL statements are used to build and modify the structure of your tables and other objects in the database. When you execute a DDL statement, it takes effect immediately.
 
-  CREATE TABLE <table name>
 
-    ( 
-        <attribute name 1> <data type 1>,
+   CREATE TABLE <table name>
+
+      ( 
+           <attribute name 1> <data type 1>,
 	
-            ...
-	
-           <attribute name n> <data type n>)
+               ...
+	  
+              <attribute name n> <data type n>)
 
 
 Data manipulation language(DML)
 
 DML statements are used to work with the data in tables. When you are connected to most multi-user databases (whether in a client program or by a connection from a Web page script), you are in effect working with a private copy of your tables that can’t be seen by anyone else until you are finished (or tell the system that you are finished). You have already seen the SELECT statement; it is considered to be part of DML even though it just retreives data rather than modifying it.
 
-INSERT INTO <table name>
+
+  INSERT INTO <table name>
 
     VALUES (<value 1>, ... <value n>);
 
@@ -35,12 +37,13 @@ In SQL, to retrieve data stored in our tables, we use the SELECT statement. The 
 
 Basic syntax of SELECT statement
 
-SELECT {attribute}+
 
-  FROM {table}+
+  SELECT {attribute}+
 
-  [ WHERE {boolean predicate to pick rows} ]
+     FROM {table}+
+
+       [ WHERE {boolean predicate to pick rows} ]
   
-     [ ORDER BY {attribute}+ ];
+           [ ORDER BY {attribute}+ ];
 
 
