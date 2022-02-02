@@ -7,19 +7,12 @@ The PRIMARY KEY constraint uniquely identifies each record in a database table. 
 
  mysql> DROP TABLE Brands;
 
-    mysql> CREATE TABLE Brands(Id INTEGER PRIMARY KEY, BrandName VARCHAR(30) UNIQUE);
+  mysql> CREATE TABLE Brands(Id INTEGER PRIMARY KEY, BrandName VARCHAR(30) UNIQUE);
 
 
 The Id column of the Brands table becomes a primary key.
 
  mysql> DESCRIBE Brands;
-
-+-----------+-------------+------+-----+---------+-------+
-| Field     | Type        | Null | Key | Default | Extra |
-+-----------+-------------+------+-----+---------+-------+
-| Id        | int(11)     | NO   | PRI | NULL    |       |
-| BrandName | varchar(30) | YES  | UNI | NULL    |       |
-+-----------+-------------+------+-----+---------+-------+
 
 
 Foreign key
@@ -41,16 +34,9 @@ The table has an Id, Name, and Quality columns defined. The Quality column is an
 
  mysql> INSERT INTO Shops VALUES(1, 'Boneys', 'High');
 
-   mysql> INSERT INTO Shops VALUES(2, 'AC River', 'Average');
+  mysql> INSERT INTO Shops VALUES(2, 'AC River', 'Average');
 
-     mysql> INSERT INTO Shops VALUES(3, 'AT 34', '**');
+    mysql> INSERT INTO Shops VALUES(3, 'AT 34', '**');
 
-       mysql> SELECT * FROM Shops;
-
-+------+----------+---------+
-| Id   | Name     | Quality |
-+------+----------+---------+
-|    1 | Boneys   | High    |
-|    2 | AC River | Average |
-|    3 | AT 34    |         |
-+------+----------+---------+
+     mysql> SELECT * FROM Shops;
+     
