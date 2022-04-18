@@ -1,11 +1,12 @@
 #!/usr/bin/node
 
-const fs = require('fs');
-const FileName = process.argv[2];
-const FileContent = process.argv[3];
-
-fs.writeFile(FileName, FileContent, function (err) {
+const request = require('request');
+const MovieId = process.argv[2];
+const url = 'https://swapi-api.hbtn.io/api/films/' + MovieId;
+request.get(url, function (err, response, body) {
   if (err) {
     console.log(err);
+  } else {
+    console.log(JSON.parse(body).title);
   }
 });
